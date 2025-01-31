@@ -1,0 +1,77 @@
+{
+  "name": "@fir/heroku-adoption-tool",
+  "description": "Internal adoption plugin for Heroku Fir",
+  "version": "0.0.0",
+  "author": "Muhammad Abdul Rehman",
+  "bin": {
+    "heroku": "./bin/run.js"
+  },
+  "bugs": "https://github.com/https://github.com/marehman0123/heroku-fir-adoption-plugin/Muhhmad Abdul Rehman/issues",
+  "dependencies": {
+    "@oclif/core": "^4",
+    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-plugins": "^5",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.7",
+    "ora": "^5.4.1",
+    "table": "^6.9.0"
+  },
+  "devDependencies": {
+    "@oclif/prettier-config": "^0.2.1",
+    "@oclif/test": "^4",
+    "@types/chai": "^4",
+    "@types/mocha": "^10",
+    "@types/node": "^18",
+    "chai": "^4",
+    "eslint": "^8",
+    "eslint-config-oclif": "^5",
+    "eslint-config-oclif-typescript": "^3",
+    "eslint-config-prettier": "^9",
+    "mocha": "^10",
+    "oclif": "^4",
+    "shx": "^0.3.3",
+    "ts-node": "^10",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "/bin",
+    "/dist",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/https://github.com/marehman0123/heroku-fir-adoption-plugin/Muhhmad Abdul Rehman",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "oclif": {
+    "bin": "heroku",
+    "dirname": "heroku",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  },
+  "repository": "https://github.com/marehman0123/heroku-fir-adoption-plugin/Muhhmad Abdul Rehman",
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "clean": "shx rm -rf dist",
+    "lint": "eslint . --ext .ts",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "npm run lint",
+    "prepack": "oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
+  "types": "dist/index.d.ts"
+}

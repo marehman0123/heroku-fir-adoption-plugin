@@ -1,0 +1,22 @@
+echo "
+# Ignore environment files
+.env
+
+# Node modules
+node_modules/
+
+# Compiled files
+lib/**/*.js
+lib/**/*.d.ts
+lib/tsconfig.tsbuildinfo
+
+# VS Code settings
+.vscode/
+
+# Logs
+nohup.out
+.DS_Store
+
+# TypeScript cache
+tsconfig.tsbuildinfo
+" > .gitignore
