@@ -6,9 +6,8 @@ echo "
 node_modules/
 
 # Compiled files
-lib/**/*.js
-lib/**/*.d.ts
-lib/tsconfig.tsbuildinfo
+/dist
+/lib
 
 # VS Code settings
 .vscode/
@@ -20,3 +19,15 @@ nohup.out
 # TypeScript cache
 tsconfig.tsbuildinfo
 " > .gitignore
+
+
+*-debug.log
+*-error.log
+.nyc_output
+/.nyc_output
+/dist
+/lib
+/package-lock.json
+/tmp
+coverage
+node_modules
